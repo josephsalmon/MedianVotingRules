@@ -1,6 +1,4 @@
----
-title: Median Voting Rules
----
+# Median Voting Rules
 
 This repository investigates different median voting rules, including the popular majority voting one.
 
