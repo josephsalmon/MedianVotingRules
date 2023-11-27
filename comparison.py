@@ -12,7 +12,7 @@ def median_grade(x, n_mods=5):
     x: array of grades
     n_mods: number of modalities
     Output:
-    alpha: median grade
+    alpha: median graden
     p: proportion of grades above alpha
     q: proportion of grades below alpha
     y: proportion of grades for each modality
@@ -115,13 +115,13 @@ def plot_vote_synthesis(df, n_mods, tie):
 n_mods = 5
 tie = "Majority Judgement"
 
-df_raw = pd.read_csv("lime_survey_location.csv", dtype="Int64")
-df_raw.set_index("id", inplace=True)
+df_raw = pd.read_csv("results-survey-location.csv", dtype="Int64")
+df_raw.set_index("Response ID", inplace=True)
 df_raw.columns = ["St-Eloi", "St-Priest", "MTD"]
 df = score_computation(df_raw, n_mods=5, tie=tie)
 plot_vote_synthesis(df, n_mods, tie)
 # %%
-df_raw = pd.read_csv("lime_survey_time.csv", dtype="Int64")
+df_raw = pd.read_csv("results-survey-time.csv", dtype="Int64")
 df_raw.set_index("Response ID", inplace=True)
 df_raw.columns = [
     "Wednesday : 09:30 AM - 10:30 AM",
